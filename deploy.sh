@@ -19,6 +19,6 @@ mkdir ./data/neo4j
 ### mongodb
 cp ./databases/mongo/.env.template ./databases/mongo/.env
 ### neo4j
-cp ./databases/neo4j/.env.template ./databases/neo4j/.env.template
+cp ./databases/neo4j/.env.template ./databases/neo4j/.env
 ## DATABASE INTERACTORS
 cp ./microservices/external/mongo-express/.env.template ./microservices/external/mongo-express/.env
