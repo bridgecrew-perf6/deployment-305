@@ -68,4 +68,10 @@ services:
       - "./data/nextcloud:/var/www/html"
     env_file:
       - ./microservices/external/nextcloud/.env
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 9006:8080
   
