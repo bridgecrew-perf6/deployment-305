@@ -25,7 +25,8 @@ services:
     env_file:
       - ./microservices/external/mongo-express/.env
   
-
+  ## neo4j for possible graph applications
+  ### comes bundled with a viewer.
   neo4j:
     image: neo4j
     restart: always
@@ -34,4 +35,11 @@ services:
       - 9003:7687
     volumes:
       - "./data/neo4j:/data"
+  
+  ## redis
+  redis:
+    image: redis
+    restart: always
+    volumes:
+      - "./data/redis:/data"
   
