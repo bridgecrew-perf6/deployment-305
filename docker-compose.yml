@@ -25,3 +25,13 @@ services:
     env_file:
       - ./microservices/external/mongo-express/.env
   
+
+  neo4j:
+    image: neo4j
+    restart: always
+    ports:
+      - 9002:7474
+      - 9003:7687
+    volumes:
+      - "./data/neo4j:/data"
+  

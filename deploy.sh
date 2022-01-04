@@ -10,11 +10,15 @@ mkdir ./data
 
 ## DATABASE SECTION
 mkdir ./data/mongo
+mkdir ./data/neo4j
 
 
 # ENV FILE CREATION
 
 ## DATABASE SECTION
+### mongodb
 cp ./databases/mongo/.env.template ./databases/mongo/.env
+### neo4j
+cp ./databases/neo4j/.env.template ./databases/neo4j/.env.template
 ## DATABASE INTERACTORS
 cp ./microservices/external/mongo-express/.env.template ./microservices/external/mongo-express/.env
