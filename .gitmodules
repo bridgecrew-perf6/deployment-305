@@ -1,0 +1,6 @@
+[submodule "databases"]
+	path = databases
+	url = https://github.com/sumukshashidhar/databases.git
+[submodule "microservices"]
+	path = microservices
+	url = https://github.com/sumukshashidhar/microservices.git
