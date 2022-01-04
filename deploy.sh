@@ -14,6 +14,7 @@ mkdir ./data/mongo
 mkdir ./data/neo4j
 mkdir ./data/redis
 mkdir ./data/nextcloud
+mkdir ./data/mariadb
 
 
 # ENV FILE CREATION
@@ -25,8 +26,12 @@ cp ./databases/mongo/.env.template ./databases/mongo/.env
 cp ./databases/neo4j/.env.template ./databases/neo4j/.env
 ### redis
 cp ./databases/redis/.env.template ./databases/redis/.env
+### mariadb
+cp ./databases/mariadb/.env.template ./databases/mariadb/.env
 ## DATABASE INTERACTORS
 cp ./microservices/external/mongo-express/.env.template ./microservices/external/mongo-express/.env
 
+## nextcloud
+cp ./microservices/external/nextcloud/.env.template ./microservices/external/nextcloud/.env
 # run docker
 docker-compose up
