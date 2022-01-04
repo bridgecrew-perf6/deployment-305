@@ -48,6 +48,15 @@ services:
     restart: always
     ports:
       - 9004:8001
+
+  mariadb:
+    image: mariadb
+    restart: always
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
+    volumes:
+       - "./data/mariadb:/var/lib/mysql"
+    env_file:
+      - ./databases/mariadb/.env
   
 
   nextcloud:
@@ -57,4 +66,6 @@ services:
       - 9005:80
     volumes:
       - "./data/nextcloud:/var/www/html"
+    env_file:
+      - ./microservices/external/nextcloud/.env
   
