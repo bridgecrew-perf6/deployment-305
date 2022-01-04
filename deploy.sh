@@ -16,6 +16,7 @@ mkdir ./data/redis
 mkdir ./data/nextcloud
 mkdir ./data/mariadb
 mkdir ./data/ghost
+mkdir ./data/influxdb
 
 # ENV FILE CREATION
 
