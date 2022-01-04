@@ -13,6 +13,7 @@ mkdir ./data
 mkdir ./data/mongo
 mkdir ./data/neo4j
 mkdir ./data/redis
+mkdir ./data/nextcloud
 
 
 # ENV FILE CREATION
