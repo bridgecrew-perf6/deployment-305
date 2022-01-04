@@ -49,3 +49,12 @@ services:
     ports:
       - 9004:8001
   
+
+  nextcloud:
+    image: nextcloud
+    restart: always
+    ports:
+      - 9005:80
+    volumes:
+      - "./data/nextcloud:/var/www/html"
+  
