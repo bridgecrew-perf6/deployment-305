@@ -1,0 +1,24 @@
+version: '3'
+
+# database deployments
+## mongodb is an essential. no two ways about it.
+## however, we don't want to expose it to the world, so there's that.
+mongo:
+  image: mongo
+  restart: always
+  volumes:
+    - "./data/mongo:./data/db"
+  env_file:
+    - ./databases/mongo/.env
+
+## viewing service for mongodb. We want to be able to interact with the mongo database and view the data.
+### this needs to be exposed to the outisde world.
+#### let us follow the following ports convention: 9000 series for database interactors
+mongoexpress:
+  image: mongo-express
+  restart: always
+  ports:
+    - 9001:8081
+  env_file:
+    - ./microservices/external/mongo-express/.env
+  
