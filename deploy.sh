@@ -15,7 +15,7 @@ mkdir ./data/neo4j
 mkdir ./data/redis
 mkdir ./data/nextcloud
 mkdir ./data/mariadb
-
+mkdir ./data/ghost
 
 # ENV FILE CREATION
 
@@ -33,5 +33,7 @@ cp ./microservices/external/mongo-express/.env.template ./microservices/external
 
 ## nextcloud
 cp ./microservices/external/nextcloud/.env.template ./microservices/external/nextcloud/.env
+
+cp ./microservices/external/ghost/.env.template ./microservices/external/ghost/.env
 # run docker
 docker-compose up
