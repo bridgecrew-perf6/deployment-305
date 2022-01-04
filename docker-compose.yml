@@ -42,4 +42,10 @@ services:
     restart: always
     volumes:
       - "./data/redis:/data"
+
+  redisinsight:
+    image: redislabs/redisinsight
+    restart: always
+    ports:
+      - 9004:8001
   
