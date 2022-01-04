@@ -85,3 +85,22 @@ services:
     volumes:
       - ./data/ghost/:/var/lib/ghost/content
   
+  influxdb:
+    image: influxdb
+    restart: always
+    volumes:
+      - ./data/influxdb:/var/lib/influxdb
+
+  chronograf:
+    image: chronograf
+    command: --influxdb-url=http://influxdb:8086
+    ports:
+      - 9007:8888
+
+  # mediawiki:
+  #   image: mediawiki
+  #   restart: always
+  #   ports:
+  #     - 2001:80
+    
+  
