@@ -93,9 +93,15 @@ services:
 
   chronograf:
     image: chronograf
+    restart: always
     command: --influxdb-url=http://influxdb:8086
     ports:
       - 9007:8888
+
+  # telegraf:
+  #   image: telegraf
+  #   restart: always
+
 
   # mediawiki:
   #   image: mediawiki
